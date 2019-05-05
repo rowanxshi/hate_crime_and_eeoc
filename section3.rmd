@@ -3,8 +3,8 @@ title: "Hate crime's intimidation effects and EEOC filings"
 author: "Rowan Shi"
 date: '2019-05-04'
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 ```{r setup, include = FALSE}
 library(ggplot2)
@@ -28,6 +28,7 @@ Datasets of hate crime reports are becoming available at the city-level, as part
 
 ### A first look at D.C. hate crime data
 The hate crime data extends from 2012 to the present, represented in the chart below.
+
 ```{r bar, echo = FALSE}
 load("dc_hate.RData")
 dc_hate[, general_offense := offense]
