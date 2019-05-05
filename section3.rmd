@@ -3,8 +3,8 @@ title: "Hate crime's intimidation effects and EEOC filings"
 author: "Rowan Shi"
 date: '2019-05-04'
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 ```{r setup, include = FALSE}
 library(ggplot2)
@@ -71,7 +71,7 @@ dc_model_table[-1:-start_point,]
 With the linear analysis, an additional hate crime in the D.C. area is associated with `r -dc_model_table[start_point+2, 1]` fewer reports of discrimination to the EEOC. A median `r median(dc_hate_counts$hate_count)` hate crimes per month is associated with `r -dc_model_table[start_point+2, 1]*median(dc_hate_counts$hate_count)` fewer EEOC complaints each month. For context, a median `r eeoc_counts[state == "DC", .(eeoc_count = sum(eeoc_count)), by = .(year, month)][year %in% 2010:2017]$eeoc_count %>% median` complaints are made to the EEOC in D.C. each month.
 
 ## A larger project scope
-The hate crime and EEOC data also report the specific minority group targeted, which could lead to more precise analysis and possibly larger and more easily interpretable results. In addition, evidence from more cities as well as comparison across cities could add depth to the conclusions.
+The hate crime and EEOC data also report the specific minority group targeted, which could lead to more precise analysis and possibly larger results. In addition, evidence from more cities as well as comparison across cities could add depth to the conclusions.
 
 *****
 
